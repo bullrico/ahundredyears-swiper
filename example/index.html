@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="swipe-app">
+  <head>
+    <title>Swipe Demo</title>
+    <link rel='stylesheet' href="../src/swiper.css">
+    <link rel='stylesheet' href="swipe_demo.css">
+  </head>
+
+
+
+  <body ng-controller="SwipeCtrl">
+
+      <swiper speed="2000" continuous=false>
+        <div>
+          <h1>Slide 1</h1>
+        </div>
+        <div>
+          <h1>Slide 2</h1>
+        </div>
+        <div>
+          <h1>Slide 3</h1>
+        </div>
+      </swiper>
+      <ul class='nav'>
+        <li>
+          <button ng-click="slide(0)">First slide</button>
+        </li>
+        <li>
+          <button ng-click="slide(1)">Second slide</button>
+        </li>
+        <li>
+          <button ng-click="slide(2)">Last slide</button>
+        </li>
+        <li>
+          <button ng-click="prev()">Previous</button>
+        </li>
+        <li>
+          <button ng-click="next()">Next</button>
+        </li>
+      </ul>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+      <script type="text/javascript" src="../src/swipe.js"></script>
+      <script type="text/javascript" src="../src/ahundredyears-swiper.js"></script>
+      <script type="text/javascript" src="swipe_demo.js"></script>
+  </body>
+</html>

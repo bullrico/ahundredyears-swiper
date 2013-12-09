@@ -1,0 +1,14 @@
+{
+  "name": "ahundredyears-swiper",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SesoMedia/StarkeyFoundation",
+  "authors": [
+    "Bobby Santiago <bobby@100yea.rs>"
+  ],
+  "main": "./src/ahundredyears-swipe.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.3"
+  }
+}
