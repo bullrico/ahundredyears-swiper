@@ -53,7 +53,8 @@ angular.module('ahundredyears.swiper')
     controller: controller,
     template: "<div id='slider' class='swipe'><div class='swipe-wrap' ng-transclude></div></div>",
     transclude: true,
-    replace: true
+    replace: true,
+    scope: {}
   }
 
 }]);
