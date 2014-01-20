@@ -9,7 +9,6 @@ angular.module('ahundredyears.swiper', [])
 angular.module('ahundredyears.swiper')
 
 .directive('swiper', [function() {
-
   var link = function(scope, element, attrs){
     var config;
 
@@ -53,8 +52,7 @@ angular.module('ahundredyears.swiper')
     controller: controller,
     template: "<div id='slider' class='swipe'><div class='swipe-wrap' ng-transclude></div></div>",
     transclude: true,
-    replace: true,
-    scope: {}
+    replace: true
   }
 
 }]);
