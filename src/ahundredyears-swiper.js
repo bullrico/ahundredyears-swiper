@@ -30,7 +30,11 @@ angular.module('ahundredyears.swiper')
       config.continuous = !!attrs.continuous;
     }
 
-    scope.swipe = new Swipe(document.getElementById("slider"), config);
+    // TODO Use a promise
+    setTimeout(function() {
+      scope.swipe = new Swipe(document.getElementById("slider"), config);
+    }, 200);
+
 
   };
 
