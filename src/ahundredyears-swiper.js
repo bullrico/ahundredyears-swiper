@@ -33,7 +33,7 @@ angular.module('ahundredyears.swiper')
     // TODO Use a promise
     setTimeout(function() {
       scope.swipe = new Swipe(document.getElementById("slider"), config);
-    }, 200);
+    }, 1400);
 
 
   };
