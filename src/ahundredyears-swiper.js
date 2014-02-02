@@ -8,7 +8,7 @@ angular.module('ahundredyears.swiper', [])
 
 angular.module('ahundredyears.swiper')
 
-.directive('swiper', [function() {
+.directive('swiper', ["$timeout", function($timeout) {
   var link = function(scope, element, attrs){
     var config;
 
@@ -31,8 +31,8 @@ angular.module('ahundredyears.swiper')
     }
 
     // TODO Use a promise
-    setTimeout(function() {
-      scope.swipe = new Swipe(document.getElementById("slider"), config);
+    $timeout(function() {
+      scope.swipe = new Swipe(document.getElementById(scope.identifier), config);
     }, 1400);
 
 
@@ -54,9 +54,12 @@ angular.module('ahundredyears.swiper')
     restrict: "E",
     link: link,
     controller: controller,
-    template: "<div id='slider' class='swipe'><div class='swipe-wrap' ng-transclude></div></div>",
+    template: "<div id='{{identifier}}' class='swipe'><div class='swipe-wrap' ng-transclude></div></div>",
     transclude: true,
-    replace: true
+    replace: true,
+    scope: {
+      identifier: "@"
+    }
   }
 
 }]);
