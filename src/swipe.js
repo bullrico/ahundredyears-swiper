@@ -422,6 +422,11 @@ function Swipe(container, options) {
       return index;
 
     },
+    stop: function() {
+
+      stop();
+
+    },
     kill: function() {
 
       // cancel slideshow
